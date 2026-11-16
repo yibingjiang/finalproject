@@ -1,20 +1,20 @@
-Package: bst260project
-Title: project code and narrative
+Package: finalproject
+Title: Public Health Data for the BST260 Final Project
 Version: 0.0.2
 Authors@R:
-    person(given = "yourfirstname",
-           family = "lastname",
-           role = c("aut", "cre"),
-           email = "youremail@gmail.com",
-           comment = c(ORCID = "0000-0002-1825-0097"))
-Description: provide text on what your project emphasizes and 
-	accomplishes in three or more complete sentences.
-Depends: R (>= 4.5.0)
-Suggests: knitr, testthat, rmarkdown, pkgdown
+    person("Yibing (Janice)", "Jiang", role = c("aut", "cre"),
+           email = "141768352+yibingjiang@users.noreply.github.com")
+Description: Provides public health datasets used in the BST260 final project.
+    The data cover foodborne and waterborne outbreaks, homicide and firearm
+    mortality, and state firearm legislation. The accompanying documentation
+    describes the datasets and their sources.
+Depends: R (>= 4.4.0)
+Suggests: knitr, rmarkdown, pkgdown, quarto
 License: Artistic-2.0
 VignetteBuilder: quarto
 Encoding: UTF-8
-URL: https://github.com/youreponame
-BugReports: https://github.com/youreponame/issues
+URL: https://yibingjiang.github.io/finalproject/,
+    https://github.com/yibingjiang/finalproject
+BugReports: https://github.com/yibingjiang/finalproject/issues
 Config/roxygen2/version: 8.1.1
 Roxygen: list(markdown=TRUE)

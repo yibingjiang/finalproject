@@ -23,7 +23,7 @@
 #' @note The source is `https://data.cdc.gov/api/v3/views/5xkq-dg7x/query.json`
 #' Run the example to see metadata labels.
 #' @examples
-#' data("waterborne", package="bst260project")
+#' data("waterborne", package="finalproject")
 #' unique(unlist(lapply(waterborne, names)))
 #' waterborne[[1]]
 "waterborne"
