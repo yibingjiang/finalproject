@@ -1,0 +1,25 @@
+---
+title: "Fertility Trends in the United States and Age at First Birth Among U.S. Mothers"
+---
+
+**To the BST260 Teaching Team, Fall 2026**\
+**From Yibing Jiang**\
+**November 18, 2026**
+
+For my final project, I will examine U.S. fertility from two perspectives. First, how has the U.S. total fertility rate changed since 1960, and when has its trend differed from Canada’s? Second, among U.S. women aged 40–59 who have had at least two deliveries resulting in a live birth, how does the number of such deliveries vary with age at first birth?
+
+## Vignette 1. U.S. fertility trends in comparison with Canada
+
+I will use `dslabs::gapminder`, which contains annual country-level fertility estimates compiled by Gapminder. The United States and Canada both have fertility estimates from 1960 through 2015. Each observation represents one country in one year. The outcome is the total fertility rate, expressed in births per woman. It summarizes the fertility a woman would experience if she passed through her reproductive years at that year’s age-specific birth rates. [Gapminder dataset documentation](https://search.r-project.org/CRAN/refmans/dslabs/html/gapminder.html)
+
+I will plot the two countries’ annual rates on the same scale and summarize the change in each country by decade. I will also calculate the annual difference between the U.S. and Canadian rates to identify when the gap widened or narrowed. Canada serves as a reference for interpreting the U.S. trend. For example, a decline of similar magnitude in both countries would tell a different demographic story from a decline confined to the United States.
+
+## Vignette 2. Age at first birth and subsequent reproductive history
+
+I will use `NHANESraw` from the `NHANES` R package, pooling the 2009–2010 and 2011–2012 cycles of the National Health and Nutrition Examination Survey. Each observation represents one participant. My exposure is age at first live birth (`Age1stBaby`), grouped as under 20, 20–24, 25–29, and 30 or older. My outcome is the number of deliveries resulting in a live birth by the time of interview (`nBabies`). A twin delivery counts once. The questionnaire routes women with one such delivery past the first-birth-age question, so I will restrict this analysis to women with at least two. A preliminary check identified 1,172 women aged 40–59 with both measures available. [NHANES dataset documentation](https://search.r-project.org/CRAN/refmans/NHANES/html/NHANES.html) · [CDC reproductive health questionnaire](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2011/DataFiles/RHQ_G.htm)
+
+For each age-at-first-birth group, I will report the sample size and estimate the survey-weighted mean number of deliveries with a 95% confidence interval, accounting for the survey strata, clusters, and pooled-cycle weights. I will document exclusions for missing responses. I will also repeat the comparison separately for women aged 40–49 and 50–59, because age at interview determines how much of each woman’s reproductive history has been observed.
+
+## Interpretation and limitations
+
+The two vignettes address different time scales. Gapminder describes fertility in a given calendar year, while NHANES records births accumulated over an individual woman’s life. I will interpret the NHANES results as associations within the eligible group. Family preferences and socioeconomic circumstances may influence both when a woman first gives birth and how many births follow. Overall, the analyses will describe how U.S. fertility changed and how reproductive histories differ among mothers, while keeping those two conclusions distinct.
